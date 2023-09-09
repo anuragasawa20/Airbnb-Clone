@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Perks from "../PerksPage";
-import PhotoUploader from "../photouploader";
+import PhotoUploader from "./PhotoUploader";
 import AccountNav from "./AccountNav";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
