@@ -51,6 +51,10 @@ const razorpay = new Razorpay({
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send(<h1>Server is Working</h1>);
+})
+
 connectDb();
 
 function getUserData(req) {
