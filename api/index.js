@@ -38,11 +38,17 @@ cloudinary.config({
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, '/uploads').replace(/\\/g, '/')));
 // console.log(path.join(__dirname, '/uploads'));
-app.use(cors({
-    credentials: true,
-    origin: 'http://localhost:5173'
-}
-))
+
+app.use(
+    cors({
+        origin: ['http://localhost:5173',
+            'https://stayhub-one.vercel.app/'
+            , 'stayhub-git-master-anuragasawa20.vercel.app'
+            , 'stayhub-pd6hwaiwv-anuragasawa20.vercel.app'],
+        credentials: true,
+        methods: ["GET", "POST", "PUT", "DELETE"],
+    })
+);
 
 const razorpay = new Razorpay({
     key_id: process.env.RAZORPAY_KEY_ID,
