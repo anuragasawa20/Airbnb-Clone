@@ -41,10 +41,10 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads').replace(/\\/
 
 app.use(
     cors({
-        origin: ['http://localhost:5173',
-            'https://stayhub-one.vercel.app/'
-            , 'stayhub-git-master-anuragasawa20.vercel.app'
-            , 'stayhub-pd6hwaiwv-anuragasawa20.vercel.app'],
+        origin: ['http://localhost:5173', 'http://localhost:4000',
+            'https://stayhub-one.vercel.app'
+            , 'https://stayhub-git-master-anuragasawa20.vercel.app'
+            , 'https://stayhub-4k68sv2tq-anuragasawa20.vercel.app'],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE"],
     })
