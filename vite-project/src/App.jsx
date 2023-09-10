@@ -15,7 +15,7 @@ import BookingPage from './pages/BookingPage';
 import PlaceSearch from './pages/PlaceSearch';
 import PlaceByCategory from './pages/PlaceByCategory';
 
-axios.defaults.baseURL = import.meta.env.VITE_Server_Base_URL;
+// axios.defaults.baseURL = import.meta.env.VITE_Server_Base_URL;
 axios.defaults.withCredentials = true;
 
 function App() {

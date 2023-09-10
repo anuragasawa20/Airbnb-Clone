@@ -36,6 +36,7 @@ export default function Header() {
         setActiveLink(link);
     }
 
+    console.log(import.meta.env.VITE_Server_Base_URL);
     return (
         <div>
             <header className=" grid grid-cols-3 justify-between  justify-items-center ">
