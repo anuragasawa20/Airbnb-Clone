@@ -4,6 +4,7 @@ import axios from "axios";
 import { UserContext } from "../UserContext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Cookies from 'universal-cookie';
 
 export default function LoginPage() {
 
@@ -12,6 +13,7 @@ export default function LoginPage() {
     const [redirect, setRedirect] = useState(false);
     const { setUser } = useContext(UserContext);
     const navigate = useNavigate();
+    const cookies = new Cookies();
 
     async function LoginUser(ev) {
         ev.preventDefault();
@@ -28,8 +30,10 @@ export default function LoginPage() {
                         progress: undefined,
                         theme: "light",
                     });
+                    cookies.set('token', data.token, { path: '/' });
                     setUser(data);
                     setRedirect(true);
+
                 }
                 else {
                     toast.error('Account Not exist ', {

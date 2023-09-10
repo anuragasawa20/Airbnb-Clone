@@ -108,8 +108,11 @@ app.post('/login', async (req, res) => {
             if (passMatch) {
                 jwt.sign({ email: userDoc.email, id: userDoc._id }, jwtsecret, {}, (err, token) => {
                     if (err) throw err;
-                    res.cookie('token', token).json({ userDoc: userDoc, status: true });
+                    console.log(token);
+                    res.cookie('token', token).json({ userDoc: userDoc, status: true, token: token });
+
                 });
+
                 // res.json('login successful')
             }
             else {
