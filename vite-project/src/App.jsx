@@ -14,8 +14,9 @@ import BookingsPage from './pages/BookingsPage';
 import BookingPage from './pages/BookingPage';
 import PlaceSearch from './pages/PlaceSearch';
 import PlaceByCategory from './pages/PlaceByCategory';
+import config from './config';
 
-axios.defaults.baseURL = "https://airbnb-clone-at59.onrender.com";
+axios.defaults.baseURL = config.VITE_Server_Base_URL;
 axios.defaults.withCredentials = true;
 
 function App() {
