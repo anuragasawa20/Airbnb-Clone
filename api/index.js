@@ -113,15 +113,15 @@ app.post('/login', async (req, res) => {
                 // res.json('login successful')
             }
             else {
-                res.status(422).json('invalid password');
+                res.status(422).json({ error: 'invalid password', status: false });
             }
         }
         else {
-            res.json("email not exist");
+            res.json({ message: "email not exist", status: false });
         }
     }
     catch (e) {
-        res.status(422).json("invalid password");
+        res.status(422).json({ error: e, status: false });
     }
 });
 
@@ -133,10 +133,10 @@ app.post('/register', async (req, res) => {
             email,
             password: bcrypt.hashSync(password, bcryptSalt),
         })
-        res.json(userDetail);
+        res.json({ userDetail: userDetail, message: "registration successful", status: true });
     }
     catch (e) {
-        res.status(422).json(e);
+        res.status(422).json({ error: e, status: false, message: "registration failed" });
     }
 })
 
