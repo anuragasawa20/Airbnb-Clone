@@ -43,8 +43,8 @@ app.use(
     cors({
         origin: ['http://localhost:5173', 'http://localhost:4000',
             'https://stayhub-one.vercel.app'
-            , 'https://stayhub-git-master-anuragasawa20.vercel.app'
-            , 'https://stayhub-4k68sv2tq-anuragasawa20.vercel.app'],
+            , 'https://airbnb-clone-git-master-anuragasawa20.vercel.app'
+            , 'https://airbnb-clone-suc98ywod-anuragasawa20.vercel.app/'],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE"],
     })
