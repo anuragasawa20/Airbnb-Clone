@@ -42,7 +42,7 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads').replace(/\\/
 app.use(
     cors({
         origin: ['http://localhost:5173', 'http://localhost:4000',
-            'https://stayhub-one.vercel.app'
+            'https://airbnb-clone-one-red.vercel.app'
             , 'https://airbnb-clone-git-master-anuragasawa20.vercel.app'
             , 'https://airbnb-clone-suc98ywod-anuragasawa20.vercel.app/'],
         credentials: true,
